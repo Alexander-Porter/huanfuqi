@@ -20,14 +20,10 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
+    - name: Build YS
       run: |
         cd YS
         chmod +x gradlew
-        
-    - name: Build with Gradle
-      run: 
-        
         ./gradlew build
         
     - name: Upload a Build Artifact
