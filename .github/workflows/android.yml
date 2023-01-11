@@ -21,10 +21,12 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run:
+        cd YS
+        chmod +x gradlew
     - name: Build with Gradle
       run: 
-        cd YS
+        
         ./gradlew build
         
     - name: Upload a Build Artifact
